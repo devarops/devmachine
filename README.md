@@ -49,7 +49,7 @@ ansible-playbook ansible/development.yml
 
 1. Crea tu clave SSH con: `ssh-keygen`
 1. Inicia el agente SSH: `eval "$(ssh-agent -s)"`
-1. Agrega tu clave SSH al agente para hacer _forwarding_: `ssh-add ~/.ssh/id_rsa`
+1. Agrega tu clave SSH al agente para hacer _forwarding_: `ssh-add ~/.ssh/id_ed25519`
 1. Agrega la clave SSH pública[^ssh_pub] de tu cliente liviano a:
     - [Bitbucket](https://bitbucket.org/account/settings/ssh-keys/),
     - [DigitalOcean](https://cloud.digitalocean.com/account/security) y
