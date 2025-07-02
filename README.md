@@ -112,13 +112,11 @@ ansible-playbook ansible/development.yml
     ```shell
     mkdir --parents ~/repositorios/
     ```
-1. Configura `devmachine`
-    ```shell
-    cd ~/repositorios/thin_client
-    ```
 1. Verifica que tu cliente liviano cuenta con el softare requerido
     ```shell
-    cd ~/repositorios/thin_client
+    cd ~/repositorios/
+    git clone git@github.com:devarops/thin_client.git
+    cd thin_client
     make check
     ```
 1. Instala [dotfiles](https://github.com/devarops/dotfiles):
