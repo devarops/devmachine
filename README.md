@@ -70,7 +70,7 @@ En Windows, estoy usando Multipass para reproducir el entorno del servidor de de
     make check
     ```
 
-    - Si la veridicación anterior falla, corrge `thin_client/ansible/development.yml`
+    - Si la veridicación anterior falla, corrige `thin_client/ansible/development.yml`
 
 1. Instala [dotfiles](https://github.com/devarops/dotfiles):
     ```shell
