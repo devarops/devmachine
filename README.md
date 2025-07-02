@@ -87,7 +87,13 @@ En Windows, estoy usando Multipass para reproducir el entorno del servidor de de
 1. Agrega la clave SSH pública[^ssh_pub] del provisionador a:
     - [Bitbucket](https://bitbucket.org/account/settings/ssh-keys/)
     - [GitHub](https://github.com/settings/keys/)
-1. Agrega tu clave SSH al agente para hacer _forwarding_: `ssh-add ~/.ssh/id_ed25519`
+1. Agrega tu clave SSH al agente para hacer _forwarding_
+    - En Linux ejecuta: `ssh-add ~/.ssh/id_ed25519`
+    - En WSL agrega a `~/.bashrc`:
+    ```shell
+    eval `ssh-agent -s`
+    ssh-add ~/.ssh/id_ed25519
+    ```
 1. Instala Ansible
     ```shell
     sudo apt update && sudo apt install --yes ansible
