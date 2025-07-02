@@ -84,7 +84,7 @@ ansible-playbook ansible/development.yml
     cd ~/repositorios/
     git clone git@github.com:devarops/thin_client.git
     cd thin_client
-    make setup_server
+    ansible-playbook ansible/development.yml
     ```
 1. Agrega tu [bóveda secreta](https://docs.google.com/document/d/1lY7ycXs4J8wp1OyJCmPsvfB7YdQqscqL52cIZxBP6Rw/).
 1. Copia las credenciales hacia `devmachine`
