@@ -97,17 +97,6 @@ ansible-playbook ansible/development.yml
 
 ## En la `devmachine`
 
-1. Instala dependencias que no se instalaron con `thin_client`
-    - Instalación del `rich`:
-
-      ```
-      sudo apt update && sudo apt install pipx --yes
-      pipx install rich-cli
-      pipx ensurepath
-      ```
-      
-   - En el `~/.bashrc` mover al inicio del archivo las líneas incertadas por `pipx`.
-
 1. Crea directorio para clonar repositorios:
     ```shell
     mkdir --parents ~/repositorios/
@@ -119,6 +108,9 @@ ansible-playbook ansible/development.yml
     cd thin_client
     make check
     ```
+
+    - Si la veridicación anterior falla, corrge `thin_client/ansible/development.yml`
+
 1. Instala [dotfiles](https://github.com/devarops/dotfiles):
     ```shell
     cd ~/repositorios/
