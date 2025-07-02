@@ -15,7 +15,7 @@ En Windows, estoy usando Multipass para reproducir el entorno del servidor de de
         ```
 1. En `provisioner`, inicia el agente SSH: `eval "$(ssh-agent -s)"`
 1. Agrega tu clave SSH al agente para hacer _forwarding_: `ssh-add ~/.ssh/id_ed25519`
-1. 1. Instala Ansible
+1. Instala Ansible
     ```shell
     sudo apt update && sudo apt install --yes ansible
     ```
