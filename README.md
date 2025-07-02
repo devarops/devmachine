@@ -75,7 +75,7 @@ ansible-playbook ansible/development.yml
 1. Clona el repo que contiene el _playbook_ de configuración y correlo:
     ```shell
     cd ~/repositorios/
-    git clone https://github.com/IslasGECI/development_server_setup.git
+    git clone git@github.com:IslasGECI/development_server_setup.git
     cd development_server_setup/
     ansible-playbook ansible/development.yml
     ```
