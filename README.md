@@ -85,6 +85,7 @@ ansible-playbook ansible/development.yml
     ssh-keygen -f "$HOME/.ssh/known_hosts" -R "172.21.XX.YYY"
     ssh-keyscan "172.21.XX.YYY" >> "$HOME/.ssh/known_hosts"
     scp -pr ~/.vault ubuntu@172.21.XX.YYY:/home/ubuntu/.vault
+    scp -pr ~/.ssh/id_* ubuntu@172.21.XX.YYY:/home/ubuntu/.ssh/
     ```
 
 ## En la `devmachine`
