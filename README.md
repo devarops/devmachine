@@ -72,9 +72,20 @@ ansible-playbook ansible/development.yml
     cd development_server_setup/
     ansible-playbook ansible/development.yml
     ```
+1. Agrega tu [bóveda secreta](https://docs.google.com/document/d/1lY7ycXs4J8wp1OyJCmPsvfB7YdQqscqL52cIZxBP6Rw/).
+1. Copia las credenciales hacia `devmachine`
+    ```shell
+    ssh-keygen -f "$HOME/.ssh/known_hosts" -R "172.21.XX.YYY"
+    ssh-keyscan "172.21.XX.YYY" >> "$HOME/.ssh/known_hosts"
+    scp -pr ~/.vault ubuntu@172.21.XX.YYY:/home/ubuntu/.vault
+    ```
 
 ## En la `devmachine`
 
+1. Crea directorio para clonar repositorios:
+    ```shell
+    mkdir --parents ~/repositorios/
+    ```
 1. Verifica que tu cliente liviano cuenta con el softare requerido
     ```shell
     cd ~/repositorios/
@@ -91,25 +102,21 @@ ansible-playbook ansible/development.yml
       ```
       
    - En el `~/.bashrc` mover al inicio del archivo las líneas incertadas por `pipx`.
-   
+
+1. Configura `devmachine`
+    ```shell
+    cd ~/repositorios/thin_client
+    make setup_server
+    ```
+1. Verifica que tu cliente liviano cuenta con el softare requerido
+    ```shell
+    cd ~/repositorios/thin_client
+    make check
+    ```
 1. Instala [dotfiles](https://github.com/devarops/dotfiles):
     ```shell
     cd ~/repositorios/
     git clone git@github.com:devarops/dotfiles.git
     cd dotfiles
     make install
-    ```
-1. Agrega tu [bóveda secreta](https://docs.google.com/document/d/1lY7ycXs4J8wp1OyJCmPsvfB7YdQqscqL52cIZxBP6Rw/).
-1. Copia las credenciales hacia `devmachine`
-    ```shell
-    ssh-keygen -f "$HOME/.ssh/known_hosts" -R "islasgeci.dev"
-    ssh-keyscan "islasgeci.dev" >> "$HOME/.ssh/known_hosts"
-    export DEVELOPER=<Tu nombre de usuario del servidor>
-    scp -pr ~/.vault $DEVELOPER@islasgeci.dev:/home/$DEVELOPER/.vault
-    scp ~/todo.md $DEVELOPER@islasgeci.dev:/home/$DEVELOPER/todo.md
-    ```
-1. Desde `devmachine`, configura el servidor de desarrollo
-    ```shell
-    cd ~/repositorios/thin_client
-    make setup_server
     ```
