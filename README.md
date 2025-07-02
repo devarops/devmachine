@@ -104,7 +104,7 @@ ansible-playbook ansible/development.yml
     - Instalación del `rich`:
 
       ```
-      sudo apt install pipx --yes
+      sudo apt update && sudo apt install pipx --yes
       pipx install rich-cli
       pipx ensurepath
       ```
