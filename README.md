@@ -59,7 +59,7 @@ ansible-playbook ansible/development.yml
 1. Con el siguiente contenido:
     ```ini
     [devserver]
-    172.21.45.121
+    172.21.XX.YYY
     ```
 1. Crea directorio para clonar repositorios:
     ```shell
