@@ -23,7 +23,7 @@
 1. Con el siguiente contenido:
     ```ini
     [devserver]
-    172.21.XX.YYY
+    localhost ansible_connection=local
     ```
 1. Crea directorio para clonar repositorios:
     ```shell
