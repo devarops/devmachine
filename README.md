@@ -40,7 +40,7 @@ En Windows, estoy usando Multipass para reproducir el entorno del servidor de de
     cd development_server_setup/
     ansible-playbook ansible/development.yml
     ```
-1. Verifica que tu cliente liviano cuenta con el softare requerido
+1. Agrega las dependencias del cliente liviano
     ```shell
     cd ~/repositorios/
     git clone git@github.com:devarops/thin_client.git
