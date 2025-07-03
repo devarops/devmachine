@@ -59,6 +59,11 @@
     make install
     ```
 1. Agrega tu [bóveda secreta](https://docs.google.com/document/d/1lY7ycXs4J8wp1OyJCmPsvfB7YdQqscqL52cIZxBP6Rw/).
+1. Reinicia para cargar credenciales
+    ```
+    echo "source $HOME/.vault/.secrets" >> $HOME/.bashrc
+    sudo reboot now
+    ```
 1. Verifica que puedes reproducir los análisis del equipo:
     ```
     geci-testmake hola mundo
