@@ -62,6 +62,7 @@
 1. Reinicia para cargar credenciales
     ```
     echo "source $HOME/.vault/.secrets" >> $HOME/.bashrc
+    echo 'export PATH="/root/.local/bin:$PATH"' >> $HOME/.bashrc
     sudo reboot now
     ```
 1. Verifica que puedes reproducir los análisis del equipo:
