@@ -59,10 +59,12 @@
     make install
     ```
 1. Agrega tu [bóveda secreta](https://docs.google.com/document/d/1lY7ycXs4J8wp1OyJCmPsvfB7YdQqscqL52cIZxBP6Rw/).
-1. Reinicia para cargar credenciales
+1. Carga credenciales y ruta de `container_runner` en `.bashrc`, actualiza y reinicia el sistema
     ```
     echo "source $HOME/.vault/.secrets" >> $HOME/.bashrc
     echo 'export PATH="/root/.local/bin:$PATH"' >> $HOME/.bashrc
+    sudo apt update
+    sudo apt full-upgrade --yes
     sudo reboot now
     ```
 1. Verifica que puedes reproducir los análisis del equipo:
