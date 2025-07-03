@@ -11,9 +11,11 @@
     eval `ssh-agent -s`
     ssh-add ~/.ssh/id_ed25519
     ```
-1. Instala Ansible
+1. Actualiza el sistema e instala Ansible
     ```shell
-    sudo apt update && sudo apt install --yes ansible
+    sudo apt update
+    sudo apt full-upgrade --yes
+    sudo apt install --yes ansible
     ```
 1. Crea el archivo `/etc/ansible/hosts`:
     ```shell
@@ -59,12 +61,10 @@
     make install
     ```
 1. Agrega tu [bóveda secreta](https://docs.google.com/document/d/1lY7ycXs4J8wp1OyJCmPsvfB7YdQqscqL52cIZxBP6Rw/).
-1. Carga credenciales y ruta de `container_runner` en `.bashrc`, actualiza y reinicia el sistema
+1. Carga credenciales y ruta de `container_runner` en `.bashrc`, y reinicia el sistema
     ```
     echo "source $HOME/.vault/.secrets" >> $HOME/.bashrc
     echo 'export PATH="/root/.local/bin:$PATH"' >> $HOME/.bashrc
-    sudo apt update
-    sudo apt full-upgrade --yes
     sudo reboot now
     ```
 1. Verifica que puedes reproducir los análisis del equipo:
