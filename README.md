@@ -64,7 +64,6 @@
 1. Carga credenciales y ruta de `container_runner` en `.bashrc`, y reinicia el sistema
     ```
     echo "source $HOME/.vault/.secrets" >> $HOME/.bashrc
-    echo 'export PATH="$HOME/.local/bin:$PATH"' >> $HOME/.bashrc
     sudo reboot now
     ```
 1. Verifica que puedes reproducir los análisis del equipo:
