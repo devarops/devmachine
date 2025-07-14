@@ -25,6 +25,7 @@
 1. Con el siguiente contenido:
     ```ini
     [devserver]
+    islasgeci.dev ansible_host=islasgeci.dev ansible_user=evaro ansible_become_password="{{ lookup('env', 'DEVSERVER_SUDO_PASSWORD') }}"
     localhost ansible_connection=local
     ```
 1. Crea directorio para clonar repositorios:
